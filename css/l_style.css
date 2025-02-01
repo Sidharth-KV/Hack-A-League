@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Doto:wght,ROND@100..900,100&family=League+Spartan:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #ffe3be;
+  background-image: linear-gradient(
+      90deg,
+      transparent 50px,
+      #ffb4b8 50px,
+      #ffb4b8 52px,
+      transparent 52px
+    ),
+    linear-gradient(#75757554 0.1em, transparent 0.1em);
+  background-size: 100% 30px;
+  color: rgb(0, 0, 0);
+}
+
+.headd{
+  position: relative;
+  vertical-align: middle;
+  font-family: "Amatic SC", serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 10px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 80vw;
+  height: 4vw;
+  padding-top: 1vw;
+  padding-left: 1vw;
+  padding-bottom: 1vw;
+  padding-right: 1vw;
+  font-size: 5vw;
+  text-align: center;
+  padding-bottom: 10vw;
+}
+
+.box{
+  display: grid;
+  grid-template-areas:
+    "upload"
+    "submit"
+    "download";
+  gap: 1vw;
+  padding: 10vw;
+}
+
+input[type=file]{
+  width: 80vw;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #000000;
+  background: rgba(255, 255, 255, 0.274);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(87, 87, 87, 0.623);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: none;
+}
+
+input[type=file]{
+  width: 80vw;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #000000;
+  background: rgba(255, 255, 255, 0.274);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(87, 87, 87, 0.623);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.custom-file-upload{
+  width: 80vw;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #000000;
+  background: rgba(255, 255, 255, 0.274);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(87, 87, 87, 0.623);
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vw;
+  text-align: center;
+}
+
+input[type=submit]{
+  grid-area: submit;
+  border: 1px 0px 0px 0px solid #727272;
+  width: 80vw;
+  height: 12vh;
+  background-color: #333333;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  font-family: "League Spartan", serif;
+  font-weight: 600;
+  font-size: 4vw;
+  font-style: normal;
+}
+
+input[type=submit]:hover {
+  background-color: #525252;
+}
+
+.message{
+  grid-area: download;
+  border: 1px 0px 0px 0px solid #727272;
+  width: 80vw;
+  height: 5vh;
+  background-color: #631818;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100px;
+  color: white;
+  font-family: "League Spartan", serif;
+  font-weight: 300;
+  font-size: 1.3vw;
+  font-style: normal;
+}

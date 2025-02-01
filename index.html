@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>NSum</title>
+        <link rel="stylesheet"
+            media="screen and (orientation:landscape)"
+            href="./css/l_style.css">
+        <link rel="stylesheet"
+            media="screen and (orientation:portrait)"
+            href="./css/l_style.css">
+    </head>
+    <body>
+        <div class="headd">
+            Notes Summarizer
+        </div>
+        <div class="box">
+            <form action="upload.php"  method="post" enctype="multipart/form-data" >
+                <label for="file-upload" class="custom-file-upload">
+                    upload Notes (pdf,word,jpeg,png,jpg)
+                </label>
+                <input id="file-upload" type="file" name="userfile"/>
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </body>
+</html>
