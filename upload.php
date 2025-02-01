@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="refresh" content="5; url=./output.html">
         <title>NSum</title>
         <link rel="stylesheet"
             media="screen and (orientation:landscape)"
@@ -26,6 +27,14 @@
             </form>
             <div class="message">
                 <?php
+
+                $files = glob('uploads/*');   // this is deleting old files in upload improv to delete files older than a day
+                foreach($files as $file){
+                  if(is_file($file)) {
+                    unlink($file); 
+                  }
+                }  // delete fun() till here
+
                 $uploadDir = "uploads/";
 
                 $allowedTypes = ['pdf', 'docx', 'jpeg', 'jpg', 'png'];
@@ -66,8 +75,7 @@
                         mkdir($uploadDir, 0777, true);
                     }
 
-                    $newFileName = uniqid("upload_", true) . "." . $fileType;
-                    $uploadPath = $uploadDir . $newFileName;
+                    $uploadPath = $uploadDir . "out." . $fileType;
 
                     if (move_uploaded_file($fileTmpName, $uploadPath)) {
                         echo "File uploaded successfully: <a href='$uploadPath'>$fileName</a>";
