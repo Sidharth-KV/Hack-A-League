@@ -152,3 +152,33 @@ input[type=submit]:hover {
   font-size: 1.3vw;
   font-style: normal;
 }
+
+.disp{
+  display: grid;
+  grid-template-areas:
+    "vid txt";
+  gap: 1vw;
+  padding: 10vw;
+}
+
+.disp > div.vid{
+  grid-area: vid;
+}
+
+.disp > div.txt{
+  grid-area: txt;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1vw;
+  color: white;
+  user-select: none;
+  background-color: #000000;
+  border-radius: 100px;
+  padding: 10px;
+  width: 6vw;
+}

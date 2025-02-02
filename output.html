@@ -16,10 +16,38 @@
         <a class="headd" href="./index.html">
             Notes Summarizer
         </a>
-        <div class="box">
-            <form action="dld.php" method="POST">
-                <input type="submit" value = "NOTES">
-            </form>
+        <div class="disp">
+            <div class="vid">
+                <video id="videoPlayer" style="height: auto; width: 50vw; border-radius: 20px;" controls>
+                    <source src="./temp/temp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <audio id="audioPlayer" >
+                    <source src="./temp/temp.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <br>
+                <button class="btn" id="playBothBtn">Play</button>
+            </div>
+            <div class="txt">
+                <iframe src="./temp/temp.txt" style="border-radius: 20px;" width=200 height=400 frameborder=0 ></iframe>
+            </div>
         </div>
+        <script>
+            document.getElementById("playBothBtn").addEventListener("click", function () {
+                const video = document.getElementById("videoPlayer");
+                const audio = document.getElementById("audioPlayer");
+    
+                if (video.paused || audio.paused) {
+                    video.play();
+                    audio.play();
+                    this.textContent = "Pause";
+                } else {
+                    video.pause();
+                    audio.pause();
+                    this.textContent = "Play";
+                }
+            });
+        </script>
     </body>
 </html>
